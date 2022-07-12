@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+        <link rel="stylesheet" href="css/style.css" /> 
+        <title>Neon Race Game</title> 
+    </head> 
+    <body> 
+        <header> 
+            <img src="pics/coollogo_com-134721485.png" width="70%"> <!--Logo pic--> 
+        </header>  
+        <br> 
+        <br> 
+        <section> 
+            <div class="main"> 
+            <div class="container"> 
+            <img src="pics/how_to.gif" width="40%" class="how"> <!--how to play pic--> 
+            <div class="popup"> <!--pop up message--> 
+                <span id="close">&times;</span> <!--close button--> 
+                <h2>How To Play</h2> 
+                <img src="pics/desc.png" width="100%"> 
+                <div class="options"> 
+                    <a href="">OK</a> 
+                </div> 
+            </div> 
+            </div> 
+            <div class="container"> 
+            <img src="pics/create.gif" width="40%" height="50%" class="game"><!--create new game pic--> 
+            <div class="pop"> 
+             <span id="close">&times;</span> <!--close button--> 
+             <form action="game.html"> <!--when button is clicked direct user to game.html-->>
+                <div class="form-control"> 
+                    <input 
+                        size="40" 
+                        height="200px" 
+                        name="username" 
+                        id="username" 
+                        placeholder="Enter username..." 
+                        required 
+                    /> 
+                </div> 
+                <br><br> 
+                <button type="submit" class="btn">Join the Game</button> 
+            </form> 
+            </div> 
+            </div> 
+            </div> 
+             
+        </section> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--CDN of jquery-->
+        <script> 
+            // function when how to play image is clicked 
+            $(document).ready(function() { 
+             $(".how").on('click', function(){ 
+                 $(".popup").fadeIn('slow'); 
+             }); 
+             // function when close or ok button are clicked 
+             $(".popup").on('click', function(){ 
+                 if($(event.target).is("#close")){ 
+                     $(".popup").fadeOut('slow'); 
+                 } 
+                 else{ 
+                     $(".popup").fadeOut('slow'); 
+                 } 
+             }); 
+            }); 
+            // function when create new game button is clicked
+            $(document).ready(function() { 
+             $(".game").on('click', function(){ 
+                 $(".pop").fadeIn('slow'); 
+             }); 
+             // function when close or ok button are clicked 
+             $(".pop").on('click', function(){ 
+                 if($(event.target).is("#close")){ 
+                     $(".pop").fadeOut('slow'); 
+                 } 
+             }); 
+            }); 
+        </script> 
+    </body> 
+</html> 
